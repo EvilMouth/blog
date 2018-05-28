@@ -77,11 +77,11 @@ theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type: git
-  repo: 
+# deploy:
+#   type: git
+#   repo: 
 #     gitlab: git@gitlab.com:zyhang/blog.git
-  branch: master
+#   branch: master
 
 # Avatar
 ## custom avatar
