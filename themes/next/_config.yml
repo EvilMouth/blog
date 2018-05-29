@@ -306,9 +306,9 @@ codeblock:
 
 # Reward
 #reward_comment: Donate comment here
-#wechatpay: /images/wechatpay.jpg
-#alipay: /images/alipay.jpg
-#bitcoin: /images/bitcoin.png
+wechatpay: /images/wechatpay.jpg
+alipay: /images/alipay.jpg
+bitcoin: /images/alipay-redpacket.png
 
 # Related popular posts
 # Dependencies: https://github.com/tea3/hexo-related-popular-posts
