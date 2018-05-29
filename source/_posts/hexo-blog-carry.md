@@ -61,7 +61,7 @@ INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
 接下来就是网站部署了，这样别人就可以访问
 ### 前提
 - 需要配置ssh管理密匙，比较推荐使用这种方式，也可以使用普通的https，还没配置ssh的话可以参考这个
-[http://zyhang.com/2017/03/04/git-ssh-mac/](http://zyhang.com/2017/03/04/git-ssh-mac/)
+[https://blog.zyhang.com/git-ssh-mac/](https://blog.zyhang.com/git-ssh-mac/)
 - 需要给Hexo安装个Git插件
 ```
 $ npm install hexo-deployer-git --save
