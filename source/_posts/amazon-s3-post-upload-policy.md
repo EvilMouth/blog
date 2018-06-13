@@ -109,7 +109,7 @@ private static String byte2hex(byte[] b) {
 
 - 这里也是要注意签名的大小写，弄了半天大写一直说签名不对
 
-### 签名例子
+## 签名例子
 ```java
 String policy = ...;
 String encodePolicy = BinaryUtils.toBase64(policy.getBytes("utf-8"));
