@@ -483,7 +483,7 @@ pangu: false
 
 # Disqus
 disqus:
-  enable: true
+  enable: false
   shortname: zyhangs-blog
   count: true
   lazyload: false
@@ -502,13 +502,13 @@ changyan:
 # You can get your appid and appkey from https://leancloud.cn
 # more info please open https://valine.js.org
 valine:
-  enable: false
-  appid:  v66qLXUKbCl7FQ19B7k4yUq9-gzGzoHsz
-  appkey:  hTKi13KY2WjBvSEqt8EluqXx
+  enable: true
+  appid: v66qLXUKbCl7FQ19B7k4yUq9-gzGzoHsz
+  appkey: hTKi13KY2WjBvSEqt8EluqXx
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
-  placeholder: 说点什么... # comment box placeholder
-  avatar:  # gravatar style
+  placeholder: 好像少了点什么... # comment box placeholder
+  avatar: '' # gravatar style
   guest_info: nick,mail,link # custom comment header
   pageSize: 10 # pagination size
 
