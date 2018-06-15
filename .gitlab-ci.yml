@@ -15,3 +15,18 @@ pages:
     key: project
   only:
   - master
+
+dev:
+  script:
+  - npm install
+  - ./node_modules/hexo/bin/hexo generate
+  artifacts:
+    paths:
+    - public
+  cache:
+    paths:
+      - node_modules
+    key: dev
+  except:
+  - master
+  when: manual
