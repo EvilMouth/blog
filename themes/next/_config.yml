@@ -503,8 +503,10 @@ changyan:
 # more info please open https://valine.js.org
 valine:
   enable: true
-  appid: v66qLXUKbCl7FQ19B7k4yUq9-gzGzoHsz
-  appkey: hTKi13KY2WjBvSEqt8EluqXx
+  # appid: v66qLXUKbCl7FQ19B7k4yUq9-gzGzoHsz
+  # appkey: hTKi13KY2WjBvSEqt8EluqXx
+  appid: rJEGj17ptth79zkNXNqq3QVk-gzGzoHsz
+  appkey: lYhcbyCTYe1PxcoJxXqTyHJs
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
   placeholder: 好像少了点什么... # comment box placeholder
@@ -583,7 +585,7 @@ needmoreshare2:
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
-# google_site_verification:
+# google_site_verification: DHyJ1gbUzlMo3ACnYDoYzVJFULhlJMrJn_BvgnTG-H8
 
 # Google Analytics
 google_analytics: UA-104383502-2
@@ -682,7 +684,7 @@ busuanzi_count:
 
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
-baidu_push: false
+baidu_push: true
 
 # Google Calendar
 # Share your recent schedule to others via calendar page
