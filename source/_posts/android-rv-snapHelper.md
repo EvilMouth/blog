@@ -2,7 +2,7 @@
 layout: post
 title: 使用SnapHelper帮助RecyclerView滑动停留
 date: 2017-02-13 15:22:04
-tags: RecyclerView
+tags: recyclerView
 categories: Android
 ---
 

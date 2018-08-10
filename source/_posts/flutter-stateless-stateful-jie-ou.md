@@ -3,7 +3,7 @@ layout: post
 title: flutter-StatelessWidget与StatefulWidget的解耦
 date: 2018-06-13 15:54:47
 tags: learn
-categories: flutter
+categories: Flutter
 ---
 
 `StatelessWidget`和`StatefulWidget`是`flutter`的基础组件，日常开发中自定义`Widget`都是选择继承这两者之一。

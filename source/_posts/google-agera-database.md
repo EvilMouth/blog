@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 初试Google Agera database
-tags: Agera
+tags: agera
 categories: Android
 date: 2017-02-10 15:04:24
 ---
