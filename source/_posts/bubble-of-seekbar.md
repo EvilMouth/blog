@@ -2,7 +2,7 @@
 layout: post
 title: 为SeekBar添加滑动跟随气泡
 date: 2017-08-09 16:44:02
-tags: SeekBar
+tags: seekBar
 categories: Android
 ---
 

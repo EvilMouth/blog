@@ -2,7 +2,7 @@
 layout: post
 title: 上传项目到jcenter
 date: 2017-05-08 10:33:55
-tags: JCenter
+tags: jcenter
 categories: Maven
 ---
 

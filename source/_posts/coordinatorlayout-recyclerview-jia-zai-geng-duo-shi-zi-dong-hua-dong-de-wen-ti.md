@@ -3,9 +3,9 @@ layout: post
 title: CoordinatorLayout+RecyclerView加载更多时自动滑动的问题
 date: 2018-06-15 16:34:17
 tags:
- - coordinatorlayout
- - recyclerview
- - loadmore
+ - coordinatorLayout
+ - recyclerView
+ - loadMore
  - scroll
 categories: Android
 ---

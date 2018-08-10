@@ -2,8 +2,8 @@
 layout: post
 title: 在java中调用shell命令
 date: 2017-05-27 11:18:51
+tags: shell
 categories: Java
-tags: Shell
 ---
 
 [https://github.com/izyhang/ShellCommand](https://github.com/izyhang/ShellCommand)

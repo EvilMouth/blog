@@ -2,7 +2,7 @@
 layout: post
 title: 上传项目到jitpack
 date: 2017-05-08 14:56:48
-tags: Jitpack
+tags: jitpack
 categories: Maven
 ---
 

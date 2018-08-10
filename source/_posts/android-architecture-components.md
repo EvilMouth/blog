@@ -2,7 +2,7 @@
 layout: post
 title: Android Architecture Components分析记录（一）
 date: 2017-08-10 10:26:59
-tags: AAC
+tags: aac
 categories: Android
 ---
 
