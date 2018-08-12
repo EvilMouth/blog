@@ -54,7 +54,7 @@
               $('<span>').addClass('post-meta-divider').text('|')
             ).append(
               $('<span>').addClass('post-meta-item-icon').append(
-                $('<i>').addClass('fa fa-users')
+                $('<i>').addClass('fa fa-eye')
               )
               ).append($('<span>').text('{{ __("post.views")}} ' + count))
           )
@@ -65,10 +65,16 @@
       var articles = db.collection('{{ theme.firestore.collection }}')
 
       //https://hexo.io/zh-tw/docs/variables.html
+
+      var skipPost = ['about/index.html', 'categories/index.html', 'tags/index.html']
+      if (skipPost.indexOf('{{ page.path }}') > -1){
+        return
+      }
+
       var isPost = '{{ page.title }}'.length > 0
-      var isArchive = '{{ archive }}' === 'true'
-      var isCategory = '{{ category }}'.length > 0
-      var isTag = '{{ tag }}'.length > 0
+      // var isArchive = '{{ page.archive }}' === 'true'
+      // var isCategory = '{{ page.category }}'.length > 0
+      // var isTag = '{{ page.tag }}'.length > 0
 
       if (isPost) { //is article page
         var title = '{{ page.title }}'
@@ -76,24 +82,24 @@
 
         getCount(doc, true).then(appendCountTo($('.post-meta')))
       }
-      else if (!isArchive && !isCategory && !isTag) { //is index page
-        var titles = [] //array to titles
+      // else if (!isArchive && !isCategory && !isTag) { //is index page
+      //   var titles = [] //array to titles
 
-        var postsstr = '{% for post in page.posts %}titles.push("{{ post.title }}");{% endfor %}' //if you have a better way to get titles of posts, please change it
-        eval(postsstr)
+      //   var postsstr = '{% for post in page.posts %}titles.push("{{ post.title }}");{% endfor %}' //if you have a better way to get titles of posts, please change it
+      //   eval(postsstr)
 
-        var promises = titles.map(function (title) {
-          return articles.doc(title)
-        }).map(function (doc) {
-          return getCount(doc)
-        })
-        Promise.all(promises).then(function (counts) {
-          var metas = $('.post-meta')
-          counts.forEach(function (val, idx) {
-            appendCountTo(metas[idx])(val)
-          })
-        })
-      }
+      //   var promises = titles.map(function (title) {
+      //     return articles.doc(title)
+      //   }).map(function (doc) {
+      //     return getCount(doc)
+      //   })
+      //   Promise.all(promises).then(function (counts) {
+      //     var metas = $('.post-meta')
+      //     counts.forEach(function (val, idx) {
+      //       appendCountTo(metas[idx])(val)
+      //     })
+      //   })
+      // }
     })()
   </script>
 {% endif %}
