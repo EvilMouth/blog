@@ -194,7 +194,7 @@
                   <span class="post-meta-item-text">{{ __('post.comments_count') + __('symbol.colon') }}</span> <span class="post-comments-count gitment-comments-count" data-xid="{{ url_for(post.path) }}" itemprop="commentsCount"></span>
                 </a>
               </span>
-            {% elseif theme.valine.enable and theme.valine.appid and theme.valine.appkey %}
+            {% elseif theme.valine.enable and theme.valine.appid and theme.valine.appkey and (theme.valine.show_in_index or is_post()) %}
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
@@ -208,20 +208,19 @@
           {% endif %}
 
           {# LeanCould PageView #}
-          {% set isPost = page.title.length > 0 %}
-          {% if isPost %}
-          {% if theme.leancloud_visitors.enable or (theme.valine.enable and theme.valine.appid and theme.valine.appkey and theme.valine.visitor) %}
-             <span id="{{ url_for(post.path) }}" class="leancloud_visitors" data-flag-title="{{ post.title }}">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
+          {% if is_post() %}
+            {% if theme.leancloud_visitors.enable or (theme.valine.enable and theme.valine.appid and theme.valine.appkey and theme.valine.visitor) %}
+               <span id="{{ url_for(post.path) }}" class="leancloud_visitors" data-flag-title="{{ post.title }}">
+                 <span class="post-meta-divider">|</span>
+                 <span class="post-meta-item-icon">
+                   <i class="fa fa-eye"></i>
+                 </span>
+                 {% if theme.post_meta.item_text %}
+                   <span class="post-meta-item-text">{{__('post.views') + __('symbol.colon') }}</span>
+                 {% endif %}
+                   <span class="leancloud-visitors-count"></span>
                </span>
-               {% if theme.post_meta.item_text %}
-                 <span class="post-meta-item-text">{{__('post.views') + __('symbol.colon') }}</span>
-               {% endif %}
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          {% endif %}
+            {% endif %}
           {% endif %}
 
           {% if not is_index and theme.busuanzi_count.enable and theme.busuanzi_count.post_views %}
@@ -345,6 +344,12 @@
         {{ post.content }}
       {% endif  %}
     </div>
+
+    {% if theme.add_this_id %}
+      <div>
+        {% include '../_partials/share/add-this.swig' %}
+      </div>
+    {% endif %}
 
     {% if theme.related_posts.enable and (theme.related_posts.display_in_home or not is_index) %}
       {% include 'post-related.swig' with { post: post } %}

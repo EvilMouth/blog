@@ -497,6 +497,7 @@ changyan:
 # more info please open https://valine.js.org
 valine:
   enable: true # When enable is set to be true, leancloud_visitors is recommended to be closed for the re-initialization problem within different leancloud adk version.
+  show_in_index: true # Show comments count in index page
   appid: v66qLXUKbCl7FQ19B7k4yUq9-gzGzoHsz
   appkey: hTKi13KY2WjBvSEqt8EluqXx
   # appid: rJEGj17ptth79zkNXNqq3QVk-gzGzoHsz
@@ -508,7 +509,7 @@ valine:
   guest_info: nick,mail,link # custom comment header
   pageSize: 10 # pagination size
   visitor: true # leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors' for counter compatibility. Article reading statistic https://valine.js.org/visitor.html
-
+  
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
 #livere_uid: your uid

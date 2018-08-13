@@ -1,4 +1,4 @@
-{% if theme.valine.enable and theme.valine.appid and theme.valine.appkey %}
+{% if theme.valine.enable and theme.valine.appid and theme.valine.appkey and (theme.valine.show_in_index or is_post()) %}
   <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
   {% set valine_uri = '//unpkg.com/valine/dist/Valine.min.js' %}
   {% if theme.vendors.valine %}
