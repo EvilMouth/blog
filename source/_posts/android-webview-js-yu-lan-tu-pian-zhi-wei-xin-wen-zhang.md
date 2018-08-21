@@ -36,14 +36,14 @@ style="width: 647px !important; height: 345.336px !important;">
 
 ## 0x02 解决
 
-现在知道问题所在，针对`data-x`自定义属性可以通过`dataset`获得，之所以判断`dataset.type === "jpeg"`是为了过滤掉`gif`，如果你想显示`gif`，可以去掉
+现在知道问题所在，针对`data-x`自定义属性可以通过`dataset`获得，之所以判断`dataset.type !== "gif"`是为了过滤掉`gif`，如果你想显示`gif`，可以去掉
 ``` js
 function wxImgClick() {
     let objs = document.getElementsByTagName("img");
     let imgs = [];
     for (let i = 0; i < objs.length; i++) {
         let dataset = objs[i].dataset;
-        if (dataset.src && dataset.type === "jpeg") {
+        if (dataset.src && dataset.type !== "gif") {
             let index = imgs.push(dataset.src) - 1;
             objs[i].onclick = function () {
                 window.xxxxxx.openImage(imgs, index)
@@ -88,7 +88,7 @@ private void addWXImgClickJs() {
             "    let imgs = [];\n" +
             "    for (let i = 0; i < objs.length; i++) {\n" +
             "        let dataset = objs[i].dataset;\n" +
-            "        if (dataset.src && dataset.type === \"jpeg\") {\n" +
+            "        if (dataset.src && dataset.type !== \"gif\") {\n" +
             "            let index = imgs.push(dataset.src) - 1;\n" +
             "            objs[i].onclick = function () {\n" +
             "                window.xxxxxx.openImage(imgs, index)\n" +
