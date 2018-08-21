@@ -7,9 +7,9 @@ Java / Android 开发，喜欢了解新技术，仍在学习
 
 # 技术
 
-- 主Android开发，Java/Kotlin
-- 业余后台，Java/NodeJs
-- 会点前端，Vue
+- 主Android开发
+- 业余后台
+- 会点前端
 
 ## 建站日志
 
