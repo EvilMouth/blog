@@ -1,32 +1,32 @@
-# This file is a template, and might need editing before it works on your project.
-# Full project: https://gitlab.com/pages/hexo
-image: node:10.2.1
+# # This file is a template, and might need editing before it works on your project.
+# # Full project: https://gitlab.com/pages/hexo
+# image: node:10.2.1
 
-pages:
-  script:
-  - npm install
-  - ./node_modules/hexo/bin/hexo generate
-  artifacts:
-    paths:
-    - public
-  cache:
-    paths:
-      - node_modules
-    key: project
-  only:
-  - master
+# pages:
+#   script:
+#   - npm install
+#   - ./node_modules/hexo/bin/hexo generate
+#   artifacts:
+#     paths:
+#     - public
+#   cache:
+#     paths:
+#       - node_modules
+#     key: project
+#   only:
+#   - master
 
-dev:
-  script:
-  - npm install
-  - ./node_modules/hexo/bin/hexo generate
-  artifacts:
-    paths:
-    - public
-  cache:
-    paths:
-      - node_modules
-    key: dev
-  except:
-  - master
-  when: manual
+# dev:
+#   script:
+#   - npm install
+#   - ./node_modules/hexo/bin/hexo generate
+#   artifacts:
+#     paths:
+#     - public
+#   cache:
+#     paths:
+#       - node_modules
+#     key: dev
+#   except:
+#   - master
+#   when: manual
