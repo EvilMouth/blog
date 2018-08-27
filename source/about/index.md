@@ -18,3 +18,4 @@ Java / Android 开发，喜欢了解新技术，仍在学习
 - 2017.5.28 迁移到Gitlab，改用gitlab-ci持续集成
 - 2018.8.13 修复addthis显示位置错乱
 - 2018.8.16 迁移到CVM，搭了Nginx、Jenkins
+- 2018.8.27 修复分页addthis显示问题

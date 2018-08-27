@@ -345,7 +345,7 @@
       {% endif  %}
     </div>
 
-    {% if theme.add_this_id %}
+    {% if theme.add_this_id and is_post() %}
       <div>
         {% include '../_partials/share/add-this.swig' %}
       </div>
