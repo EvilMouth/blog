@@ -8,6 +8,8 @@ categories: Android
 
 提供一种链式调用AccessibilityService的方案，相比于正常使用AccessibilityService，有着几大优点：结构清晰、调用链一目了然、方便调试等
 
+<!-- More -->
+
 ## 0x00 AccessibilityService
 
 最原始的写法，就是在`onAccessibilityEvent(AccessibilityEvent)`回调中根据`eventType`处理相应的动作
