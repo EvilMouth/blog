@@ -504,7 +504,7 @@ valine:
   # appkey: lYhcbyCTYe1PxcoJxXqTyHJs
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
-  placeholder: 好像少了点什么... # comment box placeholder
+  placeholder: 好像少了点什么... ( 如果你希望能及时收到回复邮件，请填写上方邮箱，邮箱不会暴露 ) # comment box placeholder
   avatar: '' # gravatar style
   guest_info: nick,mail,link # custom comment header
   pageSize: 10 # pagination size
