@@ -38,6 +38,11 @@
   {% set nofollow = ' rel="external nofollow"' %}
 {% endif %}
 
+<span class="powered-by">
+  <a style="text-decoration: none" href="http://www.miitbeian.gov.cn" target="blank">粤ICP备17017917号</a>
+</span>
+<span class="post-meta-divider">|</span>
+
 {% if theme.footer.powered.enable %}
   <div class="powered-by">{#
   #}{{ __('footer.powered', '<a class="theme-link" target="_blank"' + nofollow + ' href="https://hexo.io">Hexo</a>') }}{% if theme.footer.powered.version %} v{{ hexo_env('version') }}{% endif %}{#
