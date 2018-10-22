@@ -39,7 +39,7 @@
 {% endif %}
 
 <span class="powered-by">
-  <a style="text-decoration: none" href="http://www.miitbeian.gov.cn" target="blank">粤ICP备17017917号</a>
+  <a style="text-decoration: none" href="http://www.miitbeian.gov.cn" target="blank">粤ICP备17017917号-1</a>
 </span>
 <span class="post-meta-divider">|</span>
 
