@@ -45,13 +45,13 @@ Hi 你的用户名! You've successfully authenticated, but GitHub does not provi
 ```
 
 ## 生成多个ssh key
-现在有很多git仓库，所以配置一个ssh key是远远不够的，所以需要配置多个ssh key，但是继续使用上面步骤会覆盖之前配置的Github公匙，因为在生成的时候没有指定名称，所以这一步是关键，下面以oschina实例
+现在有很多git仓库，所以配置一个ssh key是远远不够的，所以需要配置多个ssh key，但是继续使用上面步骤会覆盖之前配置的Github公匙，因为在生成的时候没有指定名称，所以这一步是关键，下面以gitlab实例
 
 ### 1.生成ssh key并指定名称
 ```
-$ ssh-keygen -t rsa -f ~/.ssh/id_rsa.oschina -C "你的邮箱"
+$ ssh-keygen -t rsa -f ~/.ssh/id_rsa.gitlab -C "你的邮箱"
 ```
-然后继续一路回车，就可以在根目录的`~/.ssh`目录下看到两个文件`id_rsa_oschina`、`id_rsa_oschina.pub`
+然后继续一路回车，就可以在根目录的`~/.ssh`目录下看到两个文件`id_rsa_gitlab`、`id_rsa_gitlab.pub`
 
 ### 2.新增并配置或修改config
 ```
@@ -59,20 +59,28 @@ $ touch ~/.ssh/config
 ```
 并在config文件添加以下内容
 ```
-Host *.oschina.net
-    IdentityFile ~/.ssh/id_rsa.oschina
-    User 你的用户名
+Host gitlab.com
+    IdentityFile ~/.ssh/id_rsa.gitlab
+```
+完整例子
+```
+Host github.com
+    IdentityFile ~/.ssh/id_rsa.github
+Host gitlab.com
+    IdentityFile ~/.ssh/id_rsa.gitlab
+Host git.coding.net
+    IdentityFile ~/.ssh/id_rsa.coding
 ```
 
-### 3.上传`id_rsa_oschina.pub`内容到oschina公匙
+### 3.上传`id_rsa_gitlab.pub`内容到gitlab公匙
 
 ### 4.验证
 ```
-$ ssh -T git@git.oschina.net
+$ ssh -T git@gitlab.com
 ```
 看到以下内容表示配置成功
 ```
-Welcome to Git@OSC, 你的用户名!
+Welcome to GitLab, 你的用户名!
 ```
 
 之后再配置其它git的ssh key就继续重复上述步骤就可以了，重点就是指定名称和配置config文件
