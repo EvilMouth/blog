@@ -64,13 +64,12 @@
       var db = firebase.firestore()
       var articles = db.collection('{{ theme.firestore.collection }}')
 
-      //https://hexo.io/zh-tw/docs/variables.html
-
       var skipPost = ['about/index.html', 'categories/index.html', 'tags/index.html']
       if (skipPost.indexOf('{{ page.path }}') > -1){
         return
       }
 
+      //https://hexo.io/docs/variables.html
       var isPost = '{{ page.title }}'.length > 0
       // var isArchive = '{{ page.archive }}' === 'true'
       // var isCategory = '{{ page.category }}'.length > 0
