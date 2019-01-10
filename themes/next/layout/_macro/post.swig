@@ -7,7 +7,7 @@
     {% set post_class = post_class + ' ' + post_extra_class | default('') %}
   {% endif %}
   {% if post.sticky > 0 %}
-    {% set post_class = post_class + ' ' + 'post-sticky' %}
+    {% set post_class = post_class + ' post-sticky' %}
   {% endif %}
 
   {% if theme.reading_progress.enable && not is_index %}
@@ -19,16 +19,16 @@
   {### POST BLOCK ###}
   {##################}
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="{{ config.url }}{{ url_for(post.path) }}">
+    <link itemprop="mainEntityOfPage" href="{{ config.url }}{{ url_for(post.path) }}"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="{{ author }}">
-      <meta itemprop="description" content="{{ description }}">
-      <meta itemprop="image" content="{{ url_for( theme.avatar.url | default(theme.images + '/avatar.gif') ) }}">
+      <meta itemprop="name" content="{{ author }}"/>
+      <meta itemprop="description" content="{{ description }}"/>
+      <meta itemprop="image" content="{{ url_for( theme.avatar.url | default(theme.images + '/avatar.gif') ) }}"/>
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="{{ title }}">
+      <meta itemprop="name" content="{{ title }}"/>
     </span>
 
     {% if not headlessPost %}
@@ -188,7 +188,7 @@
                   <span class="post-meta-item-text">{{ __('post.comments_count') + __('symbol.colon') }}</span> <span class="post-comments-count gitment-comments-count" data-xid="{{ url_for(post.path) }}" itemprop="commentsCount"></span>
                 </a>
               </span>
-            {% elseif theme.valine.enable and theme.valine.appid and theme.valine.appkey and (theme.valine.show_in_index or is_post()) %}
+            {% elseif (is_post() or theme.valine.comment_count) and theme.valine.enable and theme.valine.appid and theme.valine.appkey %}
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
@@ -202,27 +202,25 @@
           {% endif %}
 
           {# LeanCould PageView #}
-          {#% if is_post() %#}
-            {% if theme.leancloud_visitors.enable or (theme.valine.enable and theme.valine.appid and theme.valine.appkey and theme.valine.visitor) %}
-               <span id="{{ url_for(post.path) }}" class="leancloud_visitors" data-flag-title="{{ post.title }}">
-                 <span class="post-meta-divider">|</span>
-                 <span class="post-meta-item-icon">
-                   <i class="fa fa-eye"></i>
-                 </span>
-                 {% if theme.post_meta.item_text %}
-                   <span class="post-meta-item-text">{{__('post.views') + __('symbol.colon') }}</span>
-                 {% endif %}
-                   <span class="leancloud-visitors-count"></span>
-               </span>
-            {% endif %}
-          {#% endif %#}
+          {% if theme.leancloud_visitors.enable or (theme.valine.enable and theme.valine.appid and theme.valine.appkey and theme.valine.visitor) %}
+            <span id="{{ url_for(post.path) }}" class="leancloud_visitors" data-flag-title="{{ post.title }}">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              {% if theme.post_meta.item_text %}
+                <span class="post-meta-item-text">{{ __('post.views') + __('symbol.colon') }}</span>
+              {% endif %}
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          {% endif %}
 
           {% if not is_index and theme.busuanzi_count.enable and theme.busuanzi_count.post_views %}
             <span class="post-meta-divider">|</span>
             <span class="post-meta-item-icon"
             {% if not theme.post_meta.item_text %} title="{{ __('post.views') }}" {% endif %}>
             <i class="fa fa-{{ theme.busuanzi_count.post_views_icon }}"></i>
-            {% if theme.post_meta.item_text %} {{__('post.views') + __('symbol.colon') }} {% endif %}
+            {% if theme.post_meta.item_text %} {{ __('post.views') + __('symbol.colon') }} {% endif %}
             <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
             </span>
           {% endif %}
@@ -264,8 +262,8 @@
           {% endif %}
 
           {% if post.description and (not theme.excerpt_description or not is_index) %}
-              <div class="post-description">{#
-                #}{{ post.description }}{#
+            <div class="post-description">{#
+              #}{{ post.description }}{#
             #}</div>
           {% endif %}
 
@@ -309,7 +307,7 @@
             </div>
           {% endif %}
           <!--/noindex-->
-        {% elif post.excerpt  %}
+        {% elif post.excerpt %}
           {{ post.excerpt }}
           <!--noindex-->
           {% if theme.read_more_btn %}
@@ -344,7 +342,7 @@
         {% endif %}
       {% else %}
         {{ post.content }}
-      {% endif  %}
+      {% endif %}
     </div>
 
     {% if theme.add_this_id and is_post() %}
@@ -394,7 +392,7 @@
       {% endif %}
 
       {% if not is_index %}
-      {% if theme.rating.enable or (theme.vkontakte_api.enable and theme.vkontakte_api.like) or (theme.facebook_sdk.enable and theme.facebook_sdk.like_button) or (theme.needmoreshare2.enable and theme.needmoreshare2.postbottom.enable) or (theme.baidushare and theme.baidushare.type === "button" )%}
+      {% if theme.rating.enable or (theme.vkontakte_api.enable and theme.vkontakte_api.like) or (theme.facebook_sdk.enable and theme.facebook_sdk.like_button) or (theme.needmoreshare2.enable and theme.needmoreshare2.postbottom.enable) or (theme.baidushare and theme.baidushare.type === "button") %}
         <div class="post-widgets">
         {% if theme.rating.enable %}
           <div class="wp_rating">
@@ -404,7 +402,7 @@
 
         {% if (theme.vkontakte_api.enable and theme.vkontakte_api.like) or (theme.facebook_sdk.enable and theme.facebook_sdk.like_button) %}
           {% if theme.rating.enable %}
-             <span class="post-meta-divider">|</span>
+            <span class="post-meta-divider">|</span>
           {% endif %}
           <div class="social-like">
             {% if theme.vkontakte_api.enable and theme.vkontakte_api.like %}
@@ -427,16 +425,16 @@
           {% endif %}
           <div class="social_share">
             {% if theme.baidushare.type === "button" %}
-               <div>
-                 {% include '../_partials/share/baidushare.swig' %}
-               </div>
+              <div>
+                {% include '../_partials/share/baidushare.swig' %}
+              </div>
             {% endif %}
             {% if theme.needmoreshare2.enable and theme.needmoreshare2.postbottom.enable %}
-               <div id="needsharebutton-postbottom">
-                 <span class="btn">
-                    <i class="fa fa-share-alt" aria-hidden="true"></i>
-                 </span>
-               </div>
+              <div id="needsharebutton-postbottom">
+                <span class="btn">
+                  <i class="fa fa-share-alt" aria-hidden="true"></i>
+                </span>
+              </div>
             {% endif %}
           </div>
         {% endif %}
