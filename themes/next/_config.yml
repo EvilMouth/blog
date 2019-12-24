@@ -81,7 +81,7 @@ footer:
   # http://www.beian.miit.gov.cn
   beian:
     enable: true
-    icp: 粤ICP备17017917号-1
+    icp: 粤ICP备17017917号
 
   # Any custom text can be defined here.
   #custom_text: Hosted by <a href="https://pages.coding.me" class="theme-link" rel="noopener" target="_blank">Coding Pages</a>
