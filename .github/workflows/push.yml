@@ -1,0 +1,40 @@
+on:
+    push:
+      branches:
+        - master
+
+  env:
+    NODE_VERSION: '10.x'
+    TGZ_PATH: './release.tgz'
+  
+  jobs:
+    build-and-deploy:
+      name: Build and Deploy
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: npm install, build, and test
+        run: |
+          npm install --production
+          ./node_modules/hexo/bin/hexo clean
+          ./node_modules/hexo/bin/hexo g
+          export HEXO_ALGOLIA_INDEXING_KEY=${{ secrets.HEXO_ALGOLIA_INDEXING_KEY }}
+          ./node_modules/hexo/bin/hexo algolia
+      - name: tar c
+        run: |
+          tar -zcf ../release.tgz ./public
+          cp ../release.tgz ${{ env.TGZ_PATH }}
+      - name: push
+        uses: izyhang/SFTP-Deploy-Action@v1.1
+        with:
+          username: '${{ secrets.SSH_NAME }}'
+          server: '${{ secrets.SSH_IP }}'
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          local_path: '${{ env.TGZ_PATH }}'
+          remote_path: '${{ secrets.SSH_TARGET_PATH }}'
+          ssh_command: 'tar -zxf ${{ env.TGZ_PATH }}'
+  
