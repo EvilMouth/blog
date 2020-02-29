@@ -19,7 +19,7 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
       - name: npm install, build, and test
         run: |
-          npm install --production
+          npm install
           ./node_modules/hexo/bin/hexo clean
           ./node_modules/hexo/bin/hexo g
           export HEXO_ALGOLIA_INDEXING_KEY=${{ secrets.HEXO_ALGOLIA_INDEXING_KEY }}
