@@ -1,17 +1,17 @@
 on:
-    push:
-      branches:
-        - master
+  push:
+    branches:
+      - master
 
 env:
-    NODE_VERSION: '10.x'
-    TGZ_PATH: './release.tgz'
-  
+  NODE_VERSION: '10.x'
+  TGZ_PATH: './release.tgz'
+
 jobs:
-    build-and-deploy:
-      name: Build and Deploy
-      runs-on: ubuntu-latest
-      steps:
+  build-and-deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+    steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@v1
@@ -37,4 +37,3 @@ jobs:
           local_path: '${{ env.TGZ_PATH }}'
           remote_path: '${{ secrets.SSH_TARGET_PATH }}'
           ssh_command: 'tar -zxf ${{ env.TGZ_PATH }}'
-  
