@@ -26,7 +26,6 @@
           <div class="content">
             {% block content %}{% endblock %}
           </div>
-          {% include '_custom/add-this.swig' %}
           {% include '_partials/comments.swig' %}
         </div>
         {%- if theme.sidebar.display !== 'remove' %}

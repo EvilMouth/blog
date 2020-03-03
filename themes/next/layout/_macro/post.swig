@@ -220,6 +220,10 @@
     {%- if not is_index %}
       {{- next_inject('postBodyEnd') }}
 
+      {%- if theme.add_this_id %}
+        {{ partial('_partials/share/add-this.swig') }}
+      {%- endif %}
+
       {%- if post.reward_settings.enable %}
         {{ partial('_partials/post/post-reward.swig') }}
       {%- endif %}
