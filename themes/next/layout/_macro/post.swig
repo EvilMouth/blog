@@ -97,14 +97,19 @@
           {%- endif %}
 
           {# LeanCloud PageView #}
-          {%- if (theme.leancloud_visitors.enable and not theme.leancloud_visitors.hidden) or (theme.valine.enable and theme.valine.appid and theme.valine.appkey and theme.valine.visitor) %}
-            <span id="{{ url_for(post.path) }}" class="post-meta-item leancloud_visitors" data-flag-title="{{ post.title }}" title="{{ __('post.views') }}">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
+          {%- if theme.leancloud_visitors.enable or (theme.valine.enable and theme.valine.appid and theme.valine.appkey and theme.valine.visitor) %}
+            {%- if theme.leancloud_visitors.hidden %}
+              <span style="display:none;" id="{{ url_for(post.path) }}" class="post-meta-item leancloud_visitors" data-flag-title="{{ post.title }}" title="{{ __('post.views') }}">
               </span>
-              <span class="post-meta-item-text">{{ __('post.views') + __('symbol.colon') }}</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
+            {% else %}
+              <span id="{{ url_for(post.path) }}" class="post-meta-item leancloud_visitors" data-flag-title="{{ post.title }}" title="{{ __('post.views') }}">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-eye"></i>
+                </span>
+                <span class="post-meta-item-text">{{ __('post.views') + __('symbol.colon') }}</span>
+                <span class="leancloud-visitors-count"></span>
+              </span>
+            {%- endif %}
           {%- endif %}
 
           {%- if theme.firestore.enable %}
