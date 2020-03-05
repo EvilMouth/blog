@@ -105,9 +105,12 @@ creative_commons:
 
 # Schemes
 # scheme: Muse
-#scheme: Mist
+# scheme: Mist
 scheme: Pisces
-#scheme: Gemini
+# scheme: Gemini
+
+# Dark Mode
+darkmode: false
 
 
 # ---------------------------------------------------------------
@@ -247,12 +250,12 @@ read_more_btn: true
 
 # Post meta display settings
 post_meta:
-  item_text: false
+  item_text: true
   created_at: true
   updated_at:
-    enable: false
+    enable: true
     another_day: true
-  categories: false
+  categories: true
 
 # Post wordcount display settings
 # Dependencies: https://github.com/theme-next/hexo-symbols-count-time
@@ -401,7 +404,7 @@ bookmark:
 
 # `Follow me on GitHub` banner in the top-right corner.
 github_banner:
-  enable: true
+  enable: false
   permalink: https://github.com/izyhang
   title: Follow me on GitHub
 
@@ -422,7 +425,7 @@ github_banner:
 font:
   enable: false
 
-  # Uri of fonts host, e.g. //fonts.googleapis.com (Default).
+  # Uri of fonts host, e.g. https://fonts.googleapis.com (Default).
   host:
 
   # Font options:
@@ -544,7 +547,7 @@ mediumzoom: false
 
 # Vanilla JavaScript plugin for lazyloading images.
 # For more information: https://github.com/ApoorvSaxena/lozad.js
-lazyload: false
+lazyload: true
 
 # Pangu Support
 # For more information: https://github.com/vinta/pangu.js
@@ -558,8 +561,8 @@ quicklink:
 
   # Home page and archive page can be controlled through home and archive options below.
   # This configuration item is independent of `enable`.
-  home: false
-  archive: false
+  home: true
+  archive: true
 
   # Default (true) will initialize quicklink after the load event fires.
   delay: true
@@ -628,7 +631,7 @@ changyan:
 # Valine
 # For more information: https://valine.js.org, https://github.com/xCss/Valine
 valine:
-  enable: true
+  enable: false
   appid: nz6bXMmJFc8MFel7rjABVkRs-MdYXbMMI # Your leancloud application appid
   appkey: ShmNgaeVX5Oh6C62OtT7W1Qd # Your leancloud application appkey
   notify: false # Mail notifier
@@ -707,14 +710,15 @@ cnzz_siteid:
 # AppID and AppKey are recommended to be the same as valine's for counter compatibility.
 # Do not enable both `valine.visitor` and `leancloud_visitors`.
 leancloud_visitors:
-  enable: false
-  app_id: # <app_id>
-  app_key: # <app_key>
+  enable: true
+  app_id: nz6bXMmJFc8MFel7rjABVkRs-MdYXbMMI
+  app_key: ShmNgaeVX5Oh6C62OtT7W1Qd
   # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
   # If you don't care about security in leancloud counter and just want to use it directly
   # (without hexo-leancloud-counter-security plugin), set `security` to `false`.
-  security: true
+  security: false
   betterPerformance: false
+  hidden: true
 
 # Another tool to show number of visitors to each article.
 # Visit https://console.firebase.google.com/u/0/ to get apiKey and projectId.

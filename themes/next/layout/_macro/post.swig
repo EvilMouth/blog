@@ -85,9 +85,7 @@
               <span class="post-meta-item-text">{{ __('post.in') }}</span>
               {%- for cat in post.categories.toArray() %}
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="{{ url_for(cat.path) }}" itemprop="url" rel="index">
-                    <span itemprop="name">{{ cat.name }}</span>
-                  </a>
+                  <a href="{{ url_for(cat.path) }}" itemprop="url" rel="index"><span itemprop="name">{{ cat.name }}</span></a>
                 </span>
 
                 {%- set cat_length = post.categories.length %}
@@ -99,7 +97,7 @@
           {%- endif %}
 
           {# LeanCloud PageView #}
-          {%- if theme.leancloud_visitors.enable or (theme.valine.enable and theme.valine.appid and theme.valine.appkey and theme.valine.visitor) %}
+          {%- if (theme.leancloud_visitors.enable and not theme.leancloud_visitors.hidden) or (theme.valine.enable and theme.valine.appid and theme.valine.appkey and theme.valine.visitor) %}
             <span id="{{ url_for(post.path) }}" class="post-meta-item leancloud_visitors" data-flag-title="{{ post.title }}" title="{{ __('post.views') }}">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -180,7 +178,7 @@
 
       {%- if is_index %}
         {%- if post.description and theme.excerpt_description %}
-          {{ post.description }}
+          <p>{{ post.description }}</p>
           <!--noindex-->
           {%- if theme.read_more_btn %}
             <div class="post-button">
