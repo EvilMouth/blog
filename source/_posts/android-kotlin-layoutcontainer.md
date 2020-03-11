@@ -41,7 +41,7 @@ var24.setTextSize(14f)
 
 ## 0x02 缓存问题解决
 
-当在这种需要通过`view`去获取`字view`再去操作的情况下，官方其实后来给了一个解决方案
+当在这种需要通过`view`去获取`子view`再去操作的情况下，官方其实后来给了一个解决方案
 - LayoutContainer
 
 需要额外再`build.gradle`配置
