@@ -187,7 +187,8 @@
       {%- endif %}
 
       {%- if is_index %}
-        {%- if post.description and theme.excerpt_description %}
+        {%- if theme.index_concise %}
+        {%- elif post.description and theme.excerpt_description %}
           <p>{{ post.description }}</p>
           <!--noindex-->
           {%- if theme.read_more_btn %}
@@ -262,6 +263,7 @@
 
         {{ post_nav(post) }}
       </footer>
+    {% elif theme.index_concise %}
     {% else %}
       <footer class="post-footer">
         <div class="post-eof"></div>
