@@ -28,9 +28,9 @@ $ ssh-keygen -t rsa -C "你的邮箱"
 然后一路回车即可，不要输入任何东西，就可以在根目录的`~/.ssh`目录下看到两个文件`id_rsa`、`id_rsa.pub`，其中pub后缀的文件里面的内容就是后面需要使用的key
 
 ### 3.上传key到Github
-可以使用`clip`命令，也可以自行打开文件复制
+可以使用`clipcopy`命令，也可以自行打开文件复制
 ```
-$ clip < ~/.ssh/id_rsa.pub
+$ clipcopy < ~/.ssh/id_rsa.pub
 ```
 复制完内容后就是到Github个人设置里面添加SSH公匙
 
@@ -84,3 +84,12 @@ Welcome to GitLab, 你的用户名!
 ```
 
 之后再配置其它git的ssh key就继续重复上述步骤就可以了，重点就是指定名称和配置config文件
+
+## 遇到带端口的git地址
+
+如果公司自搭git服务器带有端口号，那么需要配置Port
+```
+Host xxx.xxx.xxx
+    IdentityFile ~/.ssh/id_rsa.xxx
+    Port xxxx
+```
