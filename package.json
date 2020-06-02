@@ -5,6 +5,11 @@
   "hexo": {
     "version": "3.9.0"
   },
+  "scripts": {
+    "clean": "hexo clean",
+    "generic": "hexo g",
+    "serve": "hexo s"
+  },
   "dependencies": {
     "hexo": "^3.8.0",
     "hexo-algolia": "^1.3.1",
