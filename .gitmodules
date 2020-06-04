@@ -3,4 +3,4 @@
 	url = git@github.com:izyhang/_posts.git
 [submodule "themes/mynext"]
 	path = themes/mynext
-	url = git@github.com:izyhang/mynext.git
+	url = git@github.com:izyhang/myblog-theme-next.git
