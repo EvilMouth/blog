@@ -1,3 +1,6 @@
 [submodule "source/_posts"]
 	path = source/_posts
 	url = git@github.com:izyhang/_posts.git
+[submodule "themes/mynext"]
+	path = themes/mynext
+	url = git@github.com:izyhang/mynext.git
