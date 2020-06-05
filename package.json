@@ -8,7 +8,8 @@
   "scripts": {
     "clean": "hexo clean",
     "generic": "hexo g",
-    "serve": "hexo s"
+    "serve": "hexo s",
+    "pushSubmoduleHash": "sh ./pushSubmoduleHash.sh"
   },
   "dependencies": {
     "hexo": "^3.8.0",
