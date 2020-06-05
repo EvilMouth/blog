@@ -9,9 +9,11 @@ then
   echo 'Push rightnow? Type 'n' to stop, type any to continue'
     read reply leftover
     case $reply in
-      y* | Y*)
+      n* | N*)
+      echo 'return';;
+      *)
       echo 'pushing...'
-      git push
+      git push;;
       esac
 else
   echo 'no any submodule change'
