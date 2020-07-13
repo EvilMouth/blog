@@ -1,0 +1,9 @@
+*.md
+.git
+.github
+.gitmodules
+.gitignore
+tar-exclude
+blog.tar.tgz
+node_modules
+.DS_Store
