@@ -4,3 +4,6 @@
 [submodule "themes/mynext"]
 	path = themes/mynext
 	url = git@github.com:izyhang/myblog-theme-next.git
+[submodule "themes/mycactus"]
+	path = themes/mycactus
+	url = git@github.com:izyhang/myblog-theme-cactus.git
