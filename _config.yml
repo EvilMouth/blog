@@ -119,8 +119,8 @@ avatar: /uploads/avatar.png
   
 # Algolia
 ## 搜索
-algolia:
-  applicationID: 'CNGBCRI3R3'
-  apiKey: '347abea34bf6f6ef641c9a3c755fbd17'
-  indexName: 'myblog'
-  chunkSize: 5000
+# algolia:
+#   applicationID: 'CNGBCRI3R3'
+#   apiKey: '347abea34bf6f6ef641c9a3c755fbd17'
+#   indexName: 'myblog'
+#   chunkSize: 5000
