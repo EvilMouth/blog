@@ -11,6 +11,13 @@ Java / Android 开发，喜欢了解新技术，现在可能正在学(yz)习(xi)
 - 前后端都会点
 - loading...
 
+<!-- > Resume
+
+- TqXQxjGN3paIXIwlFjN5wGaGZbY8q6KwdGaCp6E4HmA=
+- Oops, you found me
+- Encrypt by AES256
+- Secret must find out yourself -->
+
 <!-- > 建站日志 -->
 
 <!-- - 2017.2.11 建站，使用hexo-git插件部署在Github
