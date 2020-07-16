@@ -11,6 +11,8 @@ Java / Android 开发，喜欢了解新技术，现在可能正在学(yz)习(xi)
 - 前后端都会点
 - loading...
 
+> [Rss](/atom.xml)
+
 <!-- > Resume
 
 - TqXQxjGN3paIXIwlFjN5wGaGZbY8q6KwdGaCp6E4HmA=
