@@ -1,0 +1,37 @@
+[
+  {
+    "name": "DiffPatchRecord",
+    "url": "https://github.com/izyhang/DiffPatchRecord",
+    "desc": "Android 差分包生成合成"
+  },
+  {
+    "name": "ARouter-AutowiredTransform",
+    "url": "https://github.com/izyhang/ARouter-AutowiredTransform",
+    "desc": "ARouter 自动 inject"
+  },
+  {
+    "name": "LinkedAccessibilityService",
+    "url": "https://github.com/izyhang/LinkedAccessibilityService",
+    "desc": "AccessibilityService 快速辅助工具"
+  },
+  {
+    "name": "SeekBarBubble",
+    "url": "https://github.com/izyhang/SeekBarBubble",
+    "desc": "无入侵式为 SeekBar 增加滑动气泡"
+  },
+  {
+    "name": "RxCollection",
+    "url": "https://github.com/izyhang/RxCollection",
+    "desc": "rxjava#zip 扩展"
+  },
+  {
+    "name": "SwitchLanguage",
+    "url": "https://github.com/izyhang/SwitchLanguage",
+    "desc": "Android 一键切换语言"
+  },
+  {
+    "name": "SyncGravatarTo",
+    "url": "https://github.com/izyhang/SyncGravatarTo",
+    "desc": "同步 Gravatar 小工具"
+  }
+]
