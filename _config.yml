@@ -76,14 +76,6 @@ pagination_dir: page
 # theme: mynext
 theme: mycactus
 
-# Deployment
-## Docs: https://hexo.io/docs/deployment.html
-# deploy:
-#   type: git
-#   repo: 
-#     gitlab: git@gitlab.com:zyhang/myblog.git
-#   branch: master
-
 # Avatar
 ## custom avatar
 avatar: /uploads/avatar.png
