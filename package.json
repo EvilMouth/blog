@@ -8,7 +8,8 @@
   "scripts": {
     "reBuild": "hexo clean && hexo g",
     "serve": "hexo s",
-    "pushSubmoduleHash": "sh ./pushSubmoduleHash.sh"
+    "pushSubmoduleHash": "sh ./pushSubmoduleHash.sh",
+    "publishGithubPages": "sh ./publishGithubPages.sh"
   },
   "dependencies": {
     "hexo": "^4.2.1",
