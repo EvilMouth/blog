@@ -1,21 +1,36 @@
-status=`git status`
-if [[ $status =~ "source/_posts" || $status =~ "themes/mynext" || $status =~ "themes/mycactus" ]]
-then
-  echo 'there you go'
-  git add source/_posts
-  git add themes/mynext
-  git add themes/mycactus
-  echo 'commiting...'
-  git commit -m 'auto update submodule hash'
-  echo 'Push rightnow? Type 'n' to stop, type any to continue'
-    read reply leftover
-    case $reply in
-      n* | N*)
-      echo 'return';;
-      *)
-      echo 'pushing...'
-      git push;;
-      esac
-else
-  echo 'no any submodule change'
+submodules=(
+  "source/_posts" "themes/mynext" "themes/mycactus"
+)
+isAnySubmoduleChange=false
+
+# search submodule changes
+# and sync commit
+for submodule in ${submodules[*]}; do
+  status=$(git status)
+  if [[ $status =~ "$submodule" ]]; then
+    commit=$(cd "$submodule" && git log -1 --pretty=format:"%s")
+    echo "submodule $submodule last commit: $commit"
+
+    echo "sync commit..."
+    git add "$submodule"
+    git commit -m "$commit"
+
+    # mark change
+    isAnySubmoduleChange=true
+  fi
+done
+
+# push commit
+if [ "$isAnySubmoduleChange" = true ]; then
+  echo 'push rightnow? type 'n' to stop, type any to continue'
+  read reply leftover
+  case $reply in
+  n* | N*)
+    echo 'return'
+    ;;
+  *)
+    echo 'pushing...'
+    git push
+    ;;
+  esac
 fi
