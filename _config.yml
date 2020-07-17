@@ -81,46 +81,9 @@ theme: mycactus
 # deploy:
 #   type: git
 #   repo: 
-#     gitlab: git@gitlab.com:zyhang/blog.git
+#     gitlab: git@gitlab.com:zyhang/myblog.git
 #   branch: master
 
 # Avatar
 ## custom avatar
 avatar: /uploads/avatar.png
-
-# Baidu
-## 百度统计
-# baidu_analytics: 339c0947083e970e7a980224835d49e9
-
-# DuoShuo
-## 多说评论
-# duoshuo_shortname: evilmouth
-# duoshuo_hotartical: true
-
-# JiaThis
-## 内容分享服务
-#jiathis: true
-
-# Swiftype
-## search
-#swiftype_key: JYyHHSq7zu6QzFsx7DVs
-
-# Google Analytics
-## 谷歌分析
-# google_analytics: UA-92892968-1
-
-# Local Search
-## 本地搜索
-# search:
-#   path: search.xml
-#   field: post
-#   format: html
-#   limit: 10000
-  
-# Algolia
-## 搜索
-# algolia:
-#   applicationID: 'CNGBCRI3R3'
-#   apiKey: '347abea34bf6f6ef641c9a3c755fbd17'
-#   indexName: 'myblog'
-#   chunkSize: 5000
