@@ -1,8 +1,9 @@
+url=$(git remote get-url origin)
 cd public
 git init
 git config user.name "CI"
 git config user.email "ci@zyhang.com"
-git remote add secure-origin git@github.com:izyhang/myblog.git
+git remote add secure-origin "$url"
 git checkout -b gh-pages
 git add .
 git commit -m "Updated docs"
