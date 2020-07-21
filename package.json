@@ -10,7 +10,7 @@
     "serve": "hexo s",
     "syncSubmodule": "sh ./syncSubmodule.sh",
     "publishGithubPages": "sh ./publishGithubPages.sh",
-    "deployGithubPages": "npx gh-pages -d public"
+    "deployGithubPages": "npm run clean && npx gh-pages -d public"
   },
   "dependencies": {
     "hexo": "^4.2.1",
