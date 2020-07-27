@@ -3,13 +3,9 @@ title: About Me
 date: 2018-05-28 13:27:23
 ---
 
-Java / Android 开发，喜欢了解新技术，现在可能正在学(yz)习(xi)
+> About Me
 
-> Tech
-
-- 主Android开发
-- 前后端都会点
-- loading...
+Android Developer.
 
 > [Rss](/atom.xml)
 

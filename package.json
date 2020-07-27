@@ -9,7 +9,6 @@
     "clean": "hexo clean && hexo g",
     "serve": "hexo s",
     "syncSubmodule": "sh ./syncSubmodule.sh",
-    "publishGithubPages": "sh ./publishGithubPages.sh",
     "deployGithubPages": "npm run clean && npx gh-pages -d public"
   },
   "dependencies": {
