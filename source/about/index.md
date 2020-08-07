@@ -9,7 +9,7 @@ Android Developer.
 
 > **Now Playing** on Spotify
 
-<img src="https://natemoo-re.zyhang.vercel.app/now-playing-dark" style="float:left">
+<img src="https://natemoo-re.zyhang.vercel.app/now-playing-dark" style="max-width:max-content;margin:0">
 
 > [Rss](/atom.xml)
 
