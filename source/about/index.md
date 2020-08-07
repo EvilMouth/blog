@@ -7,6 +7,12 @@ date: 2018-05-28 13:27:23
 
 Android Developer.
 
+> **Now Playing** on Spotify
+
+<a href="https://natemoo-re.zyhang.vercel.app/now-playing?open">
+    <img src="https://natemoo-re.zyhang.vercel.app/now-playing" width="256" height="64" alt="Now Playing">`
+</a>
+
 > [Rss](/atom.xml)
 
 <!-- > Resume
