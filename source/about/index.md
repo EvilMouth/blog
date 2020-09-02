@@ -7,9 +7,11 @@ date: 2018-05-28 13:27:23
 
 Android Developer.
 
-> **Now Playing** on Spotify
+> What I'm Doing Now
 
-<img src="https://natemoo-re.zyhang.vercel.app/now-playing-dark" style="max-width:max-content;margin:0">
+<!-- <img src="https://natemoo-re.zyhang.vercel.app/now-playing-dark" style="max-width:max-content;margin:0"> -->
+
+<img src="https://spotify-github-profile.vercel.app/api/view?uid=izyhang&cover_image=true" style="max-width:max-content;margin:0">
 
 <!-- > [Rss](/atom.xml) -->
 
