@@ -1,9 +1,9 @@
 [submodule "source/_posts"]
 	path = source/_posts
-	url = git@github.com:izyhang/_posts.git
+	url = git@github.com:EvilMouth/_posts.git
 [submodule "themes/mynext"]
 	path = themes/mynext
-	url = git@github.com:izyhang/myblog-theme-next.git
+	url = git@github.com:EvilMouth/myblog-theme-next.git
 [submodule "themes/mycactus"]
 	path = themes/mycactus
-	url = git@github.com:izyhang/myblog-theme-cactus.git
+	url = git@github.com:EvilMouth/myblog-theme-cactus.git

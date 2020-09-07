@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: zyhang's blog
+title: Evil Mouth's blog
 subtitle: Java/Android Developer.
 description: Learn. Record. To consolidate
 keywords:
-author: zyhang
+author: Evil Mouth
 language: en-US
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://blog.zyhang.com
+url: https://blog.evilmouth.net
 root: /
 permalink: :title/
 permalink_defaults:
