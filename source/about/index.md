@@ -1,6 +1,8 @@
 ---
 title: About Me
 date: 2018-05-28 13:27:23
+type: about
+comments: false
 ---
 
 > About Me
